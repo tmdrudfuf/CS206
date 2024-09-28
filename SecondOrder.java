@@ -26,20 +26,29 @@ public class SecondOrder {
         //quardraric
         double r1=(-b+Math.sqrt(b*b - 4*a*c))/(2*a);
         double r2=(-b-Math.sqrt(b*b - 4*a*c))/(2*a);
-        System.out.println("r1 is:"+r1);
-        System.out.println("r2 is:"+r2);
+        System.out.println("r1 ="+r1);
+        System.out.println("r2 ="+r2);
         //find p and q
         double p = (S2-(S1*r2))/(r1-r2);
         double q = S1-p;
-        System.out.println("p is:"+p);
-        System.out.println("q is:"+q);
-        System.out.println("S2: "+S2);
-        System.out.println("S1: "+S1);
+        System.out.println("p ="+p);
+        System.out.println("q ="+q);
 
         //making S(n) until S10
-        for (int n=1;n <11 ;n++ ){
-            double Sn = p* Math.pow(r1, n-1)+q*Math.pow(r2,n-1);
-            System.out.println("S"+n+" = "+Sn);
+        System.out.println("r1:"+r1);
+        System.out.println("r2:"+r2);
+        System.out.println("S(n) ="+"("+p+")"+"("+r1+")"+"^"+"(n-1)"+" + "+"("+q+")"+"("+p+")"+"("+r2+")");
+        System.out.println("S2: "+S2);
+        System.out.println("S1: "+S1);
+        if (r1!=r2){
+            for (int n=1;n <11 ;n++ ){
+                double Sn = p* Math.pow(r1, n-1)+q*Math.pow(r2,n-1);
+                System.out.println("S"+n+" = "+Sn);
+        }}else if(r1==r2){
+            for (int n=1;n<11; n++){
+                double Sn = p* Math.pow(r1,n-1)+q*(n-1)*Math.pow(r1,n-1);
+                System.out.println("S"+n+" = "+Sn);
+            }
         }
     }
 }
