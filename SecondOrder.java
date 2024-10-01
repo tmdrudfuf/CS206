@@ -5,17 +5,17 @@ public class SecondOrder {
     public static void main(String[] args) {
        //geting information of S1, S2, C1, C2
         var s = new Scanner(System.in);
-        //String junk = s.next();
-        System.out.println("S(1)");
+        String junk = s.next();
+ //       System.out.println("S(1)");
         double S1 = s.nextDouble();
-        System.out.println("S(2)");
-        //junk = s.next();
+ //       System.out.println("S(2)");
+        junk = s.next();
         double S2 = s.nextDouble();
-        System.out.println("c1");
-        //junk = s.next();
+ //       System.out.println("c1");
+        junk = s.next();
         double C1 = s.nextDouble();
-        System.out.println("c2");
-        //junk = s.next();
+    //    System.out.println("c2");
+        junk = s.next();
         double C2 = s.nextDouble();
 
         //getting r1, r2, p, and q from advanced variables
@@ -42,7 +42,7 @@ public class SecondOrder {
             System.out.println("r2="+r2);
             System.out.println("p ="+p);
             System.out.println("q ="+q);
-            System.out.println("S(n) ="+"("+p+")"+"("+r1+")"+"^"+"(n-1)"+" + "+"("+q+")"+"("+p+")"+"("+r2+")");
+            System.out.println("S(n) ="+"("+p+")"+"("+r1+")"+"^"+"(n-1)"+" + "+"("+q+")"+"("+"n-1"+")"+"("+r2+")"+"^"+"("+"n-1"+")");
 
             for (int n=1;n<11; n++){
                     double Sn = p* Math.pow(r1,n-1)+q*(n-1)*Math.pow(r1,n-1);
@@ -53,7 +53,7 @@ public class SecondOrder {
             System.out.println("r2="+r2);
             System.out.println("p ="+p);
             System.out.println("q ="+q);
-            System.out.println("S(n) ="+"("+p+")"+"("+r1+")"+"^"+"(n-1)"+" + "+"("+q+")"+"("+p+")"+"("+r2+")");
+            System.out.println("S(n) ="+"("+p+")"+"("+r1+")"+"^"+"(n-1)"+" + "+"("+q+")"+"("+-p+")"+"^"+"("+"n-1"+")");
 
             for (int n=1;n <11 ;n++ ){
                 double Sn = p* Math.pow(r1, n-1)+q*Math.pow(r2,n-1);
